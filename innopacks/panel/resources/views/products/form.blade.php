@@ -149,6 +149,7 @@ $weightClasses = [
           <x-common-form-input :title="__('panel/product.position')" name="position" :value="old('position', $product->position ?? '')" :placeholder="__('panel/product.position')" />
           <x-common-form-input :title="__('panel/product.sales')" name="sales" :value="old('sales', $product->sales ?? '')" :placeholder="__('panel/product.sales')" />
           <x-common-form-input :title="__('panel/product.viewed')" name="viewed" :value="old('viewed', $product->viewed ?? '')" :placeholder="__('panel/product.viewed')" />
+          <x-common-form-input title="Link" name="link" :value="old('link', $product->link ?? '')" />
           <x-common-form-switch-radio :title="__('panel/product.is_virtual')" name="is_virtual" :value="old('is_virtual', $product->is_virtual ?? false)" />
         </div>
       </div>
