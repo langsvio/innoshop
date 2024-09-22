@@ -33,8 +33,9 @@
                   <div class="product-name"><a href="{{ $product->url }}">{{ $product->translation->name }}</a></div>
                   <div class="product-bottom">
                     <div class="product-bottom-btns">
-                      <div class="btn-add-cart cursor-pointer" data-id="{{ $product->id }}"
-                        data-sku-id="{{ $product->product_sku_id }}">{{ __('front/product.add_to_cart') }}</div>
+                      <a class="btn-add-cart cursor-pointer" 
+                        href="{{ $product->link }}">Buy Now
+                      </a>
                     </div>
                     <div class="product-price">
                       @if ($product->masterSku->origin_price)

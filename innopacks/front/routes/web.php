@@ -116,6 +116,7 @@ Route::prefix('account')
         // Favorites
         Route::get('/favorites', [Account\FavoriteController::class, 'index'])->name('favorites.index');
         Route::post('/favorites', [Account\FavoriteController::class, 'store'])->name('favorites.store');
+        Route::delete('/favorites', [Account\FavoriteController::class, 'cancel'])->name('favorites.cancel');
         Route::post('/favorites/cancel', [Account\FavoriteController::class, 'cancel'])->name('favorites.cancel');
 
         // Addresses

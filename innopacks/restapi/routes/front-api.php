@@ -45,6 +45,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::put('/account/profile', [FrontApiControllers\AccountController::class, 'updateProfile'])->name('account.update_profile');
     Route::put('/account/password', [FrontApiControllers\AccountController::class, 'updatePassword'])->name('account.update_password');
     Route::post('/account/password', [FrontApiControllers\AccountController::class, 'setPassword'])->name('account.set_password');
+    Route::delete('/account/favorites/{id}', [FrontApiControllers\FavoriteController::class, 'cancel'])->name('favorites.cancel');
 
     Route::get('/carts', [FrontApiControllers\CartController::class, 'index'])->name('carts.index');
     Route::post('/carts', [FrontApiControllers\CartController::class, 'store'])->name('carts.store');

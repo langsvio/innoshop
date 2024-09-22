@@ -117,9 +117,9 @@
           <div class="item">
             <a href="{{ account_route('favorites.index') }}"><img src="{{ asset('icon/love.svg') }}" class="img-fluid"><span class="icon-quantity">{{ $fav_total }}</span></a>
           </div>
-          <div class="item">
+          {{-- <div class="item">
             <a href="{{ front_route('carts.index') }}" class="header-cart-icon"><img src="{{ asset('icon/cart.svg') }}" class="img-fluid"><span class="icon-quantity">0</span></a>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>

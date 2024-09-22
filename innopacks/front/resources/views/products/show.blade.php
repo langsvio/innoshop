@@ -86,15 +86,15 @@
           @include('products._variants')
 
           <div class="product-info-bottom">
-            <div class="quantity-wrap">
+            {{-- <div class="quantity-wrap">
               <div class="minus"><i class="bi bi-dash-lg"></i></div>
               <input type="number" class="form-control product-quantity" value="1" data-skuid="{{ $sku['id'] }}">
               <div class="plus"><i class="bi bi-plus-lg"></i></div>
-            </div>
+            </div> --}}
 
             <div class="product-info-btns">
-              <button class="btn btn-primary add-cart">{{ __('front/product.add_to_cart') }}</button>
-              <button class="btn buy-now ms-2">{{ __('front/product.buy_now') }}</button>
+              {{-- <button class="btn btn-primary add-cart">{{ __('front/product.add_to_cart') }}</button> --}}
+              <a class="btn btn-primary" href="{{$product->link}}" target="_blank">{{ __('front/product.buy_now') }}</a>
             </div>
           </div>
           <div class="add-wishlist" data-in-wishlist="{{ $product->hasFavorite() }}" data-id="{{ $product->id }}"><i class="bi bi-heart{{ $product->hasFavorite() ? '-fill' : '' }}"></i> {{ __('front/product.add_wishlist') }}</div>

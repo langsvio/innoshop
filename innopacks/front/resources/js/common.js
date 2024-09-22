@@ -58,7 +58,7 @@ export default {
 
     if (isWishlist) {
       $btn.html(loadHtml).prop('disabled', true);
-      axios.delete(`${urls.favorites}/${isWishlist}`).then((res) => {
+      axios.delete(`${urls.favorites}`, {product_id: id}).then((res) => {
         layer.msg(res.message)
         $btn.attr('data-in-wishlist', 0);
         if (callback) {
